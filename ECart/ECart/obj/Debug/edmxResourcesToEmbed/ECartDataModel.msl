@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ECartModelStoreContainer" CdmEntityContainer="ECartEntities1">
+    <EntitySetMapping Name="LaptopCategories">
+      <EntityTypeMapping TypeName="ECartModel.LaptopCategory">
+        <MappingFragment StoreEntitySet="LaptopCategory">
+          <ScalarProperty Name="LapCategoryId" ColumnName="LapCategoryId" />
+          <ScalarProperty Name="LapCategoryName" ColumnName="LapCategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Laptops">
+      <EntityTypeMapping TypeName="ECartModel.Laptop">
+        <MappingFragment StoreEntitySet="Laptops">
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="LaptopId" ColumnName="LaptopId" />
+          <ScalarProperty Name="LaptopName" ColumnName="LaptopName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="LapCategoryId" ColumnName="LapCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

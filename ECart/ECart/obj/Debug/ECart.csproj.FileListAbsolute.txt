@@ -1,0 +1,362 @@
+E:\Dotnet Framework\ECart\ECart\bin\ECart.dll.config
+E:\Dotnet Framework\ECart\ECart\bin\ECart.dll
+E:\Dotnet Framework\ECart\ECart\bin\ECart.pdb
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\csc.exe
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\csc.exe.config
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\csc.rsp
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\csi.exe
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\csi.exe.config
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\csi.rsp
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.AppContext.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Collections.Immutable.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Console.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.IO.Compression.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.IO.FileSystem.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.IO.Pipes.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Reflection.Metadata.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Security.AccessControl.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Security.Claims.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.ValueTuple.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Xml.XPath.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\vbc.exe
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\vbc.exe.config
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\vbc.rsp
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\VBCSCompiler.exe
+E:\Dotnet Framework\ECart\ECart\bin\roslyn\VBCSCompiler.exe.config
+E:\Dotnet Framework\ECart\ECart\bin\Antlr3.Runtime.dll
+E:\Dotnet Framework\ECart\ECart\bin\EntityFramework.dll
+E:\Dotnet Framework\ECart\ECart\bin\EntityFramework.SqlServer.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Antiforgery.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Authentication.Core.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Authorization.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.DataProtection.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Http.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Http.Extensions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Http.Features.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.JsonPatch.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Core.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Routing.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.WebUtilities.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.DotNet.PlatformAbstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.DependencyInjection.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.DependencyModel.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Localization.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Localization.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.ObjectPool.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Options.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Primitives.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.WebEncoders.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Net.Http.Headers.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Web.Infrastructure.dll
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Win32.Registry.dll
+E:\Dotnet Framework\ECart\ECart\bin\Newtonsoft.Json.Bson.dll
+E:\Dotnet Framework\ECart\ECart\bin\Newtonsoft.Json.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Buffers.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.ComponentModel.Annotations.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Memory.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Numerics.Vectors.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Security.AccessControl.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Security.Cryptography.Xml.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Security.Permissions.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Security.Principal.Windows.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Text.Encodings.Web.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Threading.Tasks.Extensions.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.Helpers.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.Mvc.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.Optimization.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.Razor.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.WebPages.Deployment.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.WebPages.dll
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.WebPages.Razor.dll
+E:\Dotnet Framework\ECart\ECart\bin\WebGrease.dll
+E:\Dotnet Framework\ECart\ECart\bin\EntityFramework.xml
+E:\Dotnet Framework\ECart\ECart\bin\EntityFramework.SqlServer.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Antiforgery.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Authentication.Core.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Authorization.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.DataProtection.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Http.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Http.Extensions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Http.Features.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.JsonPatch.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Core.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Routing.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.AspNetCore.WebUtilities.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.DependencyInjection.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Localization.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Localization.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.ObjectPool.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Options.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.Primitives.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Extensions.WebEncoders.xml
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.Net.Http.Headers.xml
+E:\Dotnet Framework\ECart\ECart\bin\Newtonsoft.Json.xml
+E:\Dotnet Framework\ECart\ECart\bin\Newtonsoft.Json.Bson.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Buffers.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Memory.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Numerics.Vectors.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Text.Encodings.Web.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Threading.Tasks.Extensions.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.Helpers.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.Mvc.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.Optimization.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.Razor.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.WebPages.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.WebPages.Deployment.xml
+E:\Dotnet Framework\ECart\ECart\bin\System.Web.WebPages.Razor.xml
+E:\Dotnet Framework\ECart\ECart\bin\Antlr3.Runtime.pdb
+E:\Dotnet Framework\ECart\ECart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Dotnet Framework\ECart\ECart\obj\Debug\ECart.csproj.CopyComplete
+E:\Dotnet Framework\ECart\ECart\obj\Debug\ECart.dll
+E:\Dotnet Framework\ECart\ECart\obj\Debug\ECart.pdb
+E:\Dotnet Framework\ECart\ECart\obj\Debug\ECart.csprojAssemblyReference.cache
+E:\E-Commerce\ECart\ECart\bin\ECart.dll.config
+E:\E-Commerce\ECart\ECart\bin\ECart.dll
+E:\E-Commerce\ECart\ECart\bin\ECart.pdb
+E:\E-Commerce\ECart\ECart\bin\roslyn\csc.exe
+E:\E-Commerce\ECart\ECart\bin\roslyn\csc.exe.config
+E:\E-Commerce\ECart\ECart\bin\roslyn\csc.rsp
+E:\E-Commerce\ECart\ECart\bin\roslyn\csi.exe
+E:\E-Commerce\ECart\ECart\bin\roslyn\csi.exe.config
+E:\E-Commerce\ECart\ECart\bin\roslyn\csi.rsp
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.Managed.Core.targets
+E:\E-Commerce\ECart\ECart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.AppContext.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Collections.Immutable.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Console.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.IO.Compression.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.IO.FileSystem.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.IO.Pipes.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Reflection.Metadata.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Security.AccessControl.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Security.Claims.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Security.Principal.Windows.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.ValueTuple.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Xml.XmlDocument.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Xml.XPath.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\E-Commerce\ECart\ECart\bin\roslyn\vbc.exe
+E:\E-Commerce\ECart\ECart\bin\roslyn\vbc.exe.config
+E:\E-Commerce\ECart\ECart\bin\roslyn\vbc.rsp
+E:\E-Commerce\ECart\ECart\bin\roslyn\VBCSCompiler.exe
+E:\E-Commerce\ECart\ECart\bin\roslyn\VBCSCompiler.exe.config
+E:\E-Commerce\ECart\ECart\bin\Antlr3.Runtime.dll
+E:\E-Commerce\ECart\ECart\bin\EntityFramework.dll
+E:\E-Commerce\ECart\ECart\bin\EntityFramework.SqlServer.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Antiforgery.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Authentication.Core.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Authorization.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.DataProtection.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Http.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Http.Extensions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Http.Features.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.JsonPatch.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Core.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Routing.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.WebUtilities.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.DotNet.PlatformAbstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.DependencyInjection.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.DependencyModel.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Localization.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Localization.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.ObjectPool.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Options.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Primitives.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.WebEncoders.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Net.Http.Headers.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Web.Infrastructure.dll
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Win32.Registry.dll
+E:\E-Commerce\ECart\ECart\bin\Newtonsoft.Json.Bson.dll
+E:\E-Commerce\ECart\ECart\bin\Newtonsoft.Json.dll
+E:\E-Commerce\ECart\ECart\bin\System.Buffers.dll
+E:\E-Commerce\ECart\ECart\bin\System.ComponentModel.Annotations.dll
+E:\E-Commerce\ECart\ECart\bin\System.Diagnostics.DiagnosticSource.dll
+E:\E-Commerce\ECart\ECart\bin\System.Memory.dll
+E:\E-Commerce\ECart\ECart\bin\System.Numerics.Vectors.dll
+E:\E-Commerce\ECart\ECart\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\E-Commerce\ECart\ECart\bin\System.Security.AccessControl.dll
+E:\E-Commerce\ECart\ECart\bin\System.Security.Cryptography.Xml.dll
+E:\E-Commerce\ECart\ECart\bin\System.Security.Permissions.dll
+E:\E-Commerce\ECart\ECart\bin\System.Security.Principal.Windows.dll
+E:\E-Commerce\ECart\ECart\bin\System.Text.Encodings.Web.dll
+E:\E-Commerce\ECart\ECart\bin\System.Threading.Tasks.Extensions.dll
+E:\E-Commerce\ECart\ECart\bin\System.Web.Helpers.dll
+E:\E-Commerce\ECart\ECart\bin\System.Web.Mvc.dll
+E:\E-Commerce\ECart\ECart\bin\System.Web.Optimization.dll
+E:\E-Commerce\ECart\ECart\bin\System.Web.Razor.dll
+E:\E-Commerce\ECart\ECart\bin\System.Web.WebPages.Deployment.dll
+E:\E-Commerce\ECart\ECart\bin\System.Web.WebPages.dll
+E:\E-Commerce\ECart\ECart\bin\System.Web.WebPages.Razor.dll
+E:\E-Commerce\ECart\ECart\bin\WebGrease.dll
+E:\E-Commerce\ECart\ECart\bin\EntityFramework.xml
+E:\E-Commerce\ECart\ECart\bin\EntityFramework.SqlServer.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Antiforgery.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Authentication.Core.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Authorization.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.DataProtection.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Http.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Http.Extensions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Http.Features.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.JsonPatch.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Core.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Routing.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.AspNetCore.WebUtilities.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.DependencyInjection.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Localization.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Localization.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.ObjectPool.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Options.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.Primitives.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Extensions.WebEncoders.xml
+E:\E-Commerce\ECart\ECart\bin\Microsoft.Net.Http.Headers.xml
+E:\E-Commerce\ECart\ECart\bin\Newtonsoft.Json.xml
+E:\E-Commerce\ECart\ECart\bin\Newtonsoft.Json.Bson.xml
+E:\E-Commerce\ECart\ECart\bin\System.Buffers.xml
+E:\E-Commerce\ECart\ECart\bin\System.Diagnostics.DiagnosticSource.xml
+E:\E-Commerce\ECart\ECart\bin\System.Memory.xml
+E:\E-Commerce\ECart\ECart\bin\System.Numerics.Vectors.xml
+E:\E-Commerce\ECart\ECart\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\E-Commerce\ECart\ECart\bin\System.Text.Encodings.Web.xml
+E:\E-Commerce\ECart\ECart\bin\System.Threading.Tasks.Extensions.xml
+E:\E-Commerce\ECart\ECart\bin\System.Web.Helpers.xml
+E:\E-Commerce\ECart\ECart\bin\System.Web.Mvc.xml
+E:\E-Commerce\ECart\ECart\bin\System.Web.Optimization.xml
+E:\E-Commerce\ECart\ECart\bin\System.Web.Razor.xml
+E:\E-Commerce\ECart\ECart\bin\System.Web.WebPages.xml
+E:\E-Commerce\ECart\ECart\bin\System.Web.WebPages.Deployment.xml
+E:\E-Commerce\ECart\ECart\bin\System.Web.WebPages.Razor.xml
+E:\E-Commerce\ECart\ECart\bin\Antlr3.Runtime.pdb
+E:\E-Commerce\ECart\ECart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\E-Commerce\ECart\ECart\obj\Debug\ECart.csproj.CopyComplete
+E:\E-Commerce\ECart\ECart\obj\Debug\ECart.dll
+E:\E-Commerce\ECart\ECart\obj\Debug\ECart.pdb
+E:\E-Commerce\ECart\ECart\obj\Debug\ECart.csprojAssemblyReference.cache

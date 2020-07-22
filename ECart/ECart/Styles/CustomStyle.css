@@ -1,0 +1,26 @@
+﻿.thumbnail{
+    padding:0px;
+}
+.imgStyle {
+    width: 100% !important;
+    height: 167px !important;
+}
+.caption {
+    height: 127px;
+    overflow: hidden;
+}
+.addToCartbtn {   
+    background-color: #fb641b !important;
+    border-color: #fb641b !important;
+    border-radius:0px !important;
+}
+.addToCart {
+    padding: 0px 0px 0px 10px;
+}
+.LapName {
+    height: 58px;
+    overflow: hidden;
+}
+.bodymargin {
+    margin-top: 20px;
+}

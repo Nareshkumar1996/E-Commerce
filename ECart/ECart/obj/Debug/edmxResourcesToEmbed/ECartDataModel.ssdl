@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ECartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LaptopCategory">
+    <Key>
+      <PropertyRef Name="LapCategoryId" />
+    </Key>
+    <Property Name="LapCategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LapCategoryName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Laptops">
+    <Key>
+      <PropertyRef Name="LaptopId" />
+    </Key>
+    <Property Name="LaptopId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LaptopName" Type="varchar" MaxLength="255" />
+    <Property Name="Price" Type="int" />
+    <Property Name="LapCategoryId" Type="int" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__Laptops__LapCate__267ABA7A">
+    <End Role="LaptopCategory" Type="Self.LaptopCategory" Multiplicity="0..1" />
+    <End Role="Laptops" Type="Self.Laptops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LaptopCategory">
+        <PropertyRef Name="LapCategoryId" />
+      </Principal>
+      <Dependent Role="Laptops">
+        <PropertyRef Name="LapCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ECartModelStoreContainer">
+    <EntitySet Name="LaptopCategory" EntityType="Self.LaptopCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Laptops" EntityType="Self.Laptops" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Laptops__LapCate__267ABA7A" Association="Self.FK__Laptops__LapCate__267ABA7A">
+      <End Role="LaptopCategory" EntitySet="LaptopCategory" />
+      <End Role="Laptops" EntitySet="Laptops" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
