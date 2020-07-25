@@ -1,0 +1,15 @@
+﻿@if (Request.IsAuthenticated)
+{
+    Html.BeginForm("Logoff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" });
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Hello " + User.Identity.Name +" !","Index","Manage")</li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Register", "Register", "Account", null, new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", null, new { id = "loginLink" })</li>
+    </ul>
+}

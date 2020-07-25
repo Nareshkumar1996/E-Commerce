@@ -38,5 +38,16 @@
       <End Role="LaptopCategory" EntitySet="LaptopCategories" />
       <End Role="Laptops" EntitySet="Laptops" />
     </AssociationSet>
+    <EntitySet Name="UserTables" EntityType="ECartModel.UserTable" />
   </EntityContainer>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

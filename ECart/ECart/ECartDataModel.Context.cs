@@ -27,5 +27,6 @@ namespace ECart
     
         public virtual DbSet<LaptopCategory> LaptopCategories { get; set; }
         public virtual DbSet<Laptop> Laptops { get; set; }
+        public virtual DbSet<UserTable> UserTables { get; set; }
     }
 }

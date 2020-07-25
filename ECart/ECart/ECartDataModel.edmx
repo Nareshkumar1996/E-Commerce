@@ -22,6 +22,16 @@
           <Property Name="LapCategoryId" Type="int" />
           <Property Name="ImageUrl" Type="varchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="UserTable">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="255" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+        </EntityType>
         <Association Name="FK__Laptops__LapCate__267ABA7A">
           <End Role="LaptopCategory" Type="Self.LaptopCategory" Multiplicity="0..1" />
           <End Role="Laptops" Type="Self.Laptops" Multiplicity="*" />
@@ -37,6 +47,7 @@
         <EntityContainer Name="ECartModelStoreContainer">
           <EntitySet Name="LaptopCategory" EntityType="Self.LaptopCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Laptops" EntityType="Self.Laptops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Laptops__LapCate__267ABA7A" Association="Self.FK__Laptops__LapCate__267ABA7A">
             <End Role="LaptopCategory" EntitySet="LaptopCategory" />
             <End Role="Laptops" EntitySet="Laptops" />
@@ -84,7 +95,18 @@
             <End Role="LaptopCategory" EntitySet="LaptopCategories" />
             <End Role="Laptops" EntitySet="Laptops" />
           </AssociationSet>
+          <EntitySet Name="UserTables" EntityType="ECartModel.UserTable" />
         </EntityContainer>
+        <EntityType Name="UserTable">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -107,6 +129,17 @@
                 <ScalarProperty Name="LaptopName" ColumnName="LaptopName" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="LapCategoryId" ColumnName="LapCategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTables">
+            <EntityTypeMapping TypeName="ECartModel.UserTable">
+              <MappingFragment StoreEntitySet="UserTable">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -304,6 +304,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LaptopController.cs" />
     <Compile Include="ECartDataModel.Context.cs">
@@ -331,6 +332,11 @@
       <DependentUpon>ECartDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserTable.cs">
+      <DependentUpon>ECartDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AccountViewModel.cs" />
+    <Compile Include="ViewModels\AddtocartViewModel.cs" />
     <Compile Include="ViewModels\LaptopViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -401,6 +407,10 @@
     <Content Include="Views\Laptop\Index.cshtml" />
     <Content Include="Views\Shared\NavBar.cshtml" />
     <Content Include="Views\Laptop\List.cshtml" />
+    <Content Include="Views\Laptop\AddToShoppingCart.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
