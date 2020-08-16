@@ -24,3 +24,13 @@
 .bodymargin {
     margin-top: 20px;
 }
+.priceTable {
+    width: 55% !important;
+}
+.details_img{
+    width:500px;
+}
+.highlight{
+    font-weight:bold;
+}
+

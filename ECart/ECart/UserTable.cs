@@ -14,10 +14,20 @@ namespace ECart
     
     public partial class UserTable
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public UserTable()
+        {
+            this.OrderDetails = new HashSet<OrderDetail>();
+        }
+    
         public int UserId { get; set; }
         public string UserName { get; set; }
         public string PhoneNumber { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+        public string ShippingAddress { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

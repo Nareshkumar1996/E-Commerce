@@ -1,37 +1,49 @@
 ﻿@model ECart.ViewModels.AddtocartViewModel
 
 <h2>Your Shopping Cart</h2>
+<hr>
+@if (Model.CartTables == null)
+{
+    <h4>Your shopping Cart is empty</h4>    
+    <div class="form-group">
+        <div class="">
+            @Html.ActionLink("Shop Here", "Index","Home", new { }, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+}
+else
+{
+    <h4>Here are the laptops in your shopping cart</h4>
 
-<h4>Here are the laptops in your shopping cart</h4>
-
-<table border="1" class="table table-striped table-dark">
-    <thead>
-        <tr>
-            <th>Selected Amount</th>
-            <th>Laptop</th>
-            <th>Price</th>
-            <th>Subtotal</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var cart in Model.CartTables)
-        {
+    <table border="1" class="table table-striped table-dark">
+        <thead>
             <tr>
-                <td>@cart.SelectedQuantity</td>
-                <td>@cart.LaptopName</td>
-                <td>@cart.Price</td>
-                <td>@cart.Price</td>
+                <th>Selected Amount</th>
+                <th>Laptop</th>
+                <th>Price</th>
+                <th>Subtotal</th>
             </tr>
-        }
+        </thead>
+        <tbody>
+            @foreach (var cart in Model.CartTables)
+            {
+                <tr>
+                    <td>@cart.SelectedQuantity</td>
+                    <td>@cart.LaptopName</td>
+                    <td>@cart.Price</td>
+                    <td>@cart.RowSubtotal</td>
+                </tr>
+            }
 
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="3">Total:</td>
-            <td>@Model.Subtotal</td>
-        </tr>
-    </tfoot>
-</table>
-<div class="checkoutbtn">
-    @Html.ActionLink("Checkout Now","Checkout",new { }, new { @class="btn btn-primary"})
-</div>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total:</td>
+                <td>@Model.Subtotal</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="checkoutbtn">
+        @Html.ActionLink("Checkout Now", "Checkout", new { }, new { @class = "btn btn-primary" })
+    </div>
+}

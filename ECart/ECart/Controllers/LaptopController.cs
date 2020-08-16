@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using static ECart.ViewModels.LaptopViewModel;
 
 namespace ECart.Controllers
 {
@@ -14,6 +14,8 @@ namespace ECart.Controllers
        public static AddtocartViewModel addtocartViewModel = new AddtocartViewModel();
        public static List<CartTable> cartTables = new List<CartTable>();
        public static Dictionary<int, int> map = new Dictionary<int, int>();
+       public static CheckoutViewModel checkout = new CheckoutViewModel();
+       
     }    
     public class LaptopController : Controller
     {
@@ -25,11 +27,12 @@ namespace ECart.Controllers
             return View(categories);
         }
         public ActionResult NavBar()
-        {
-            
+        {            
             List<LaptopCategory> categories = eCart.LaptopCategories.ToList();
-            LaptopViewModel laptopViewModel = new LaptopViewModel();
-            laptopViewModel.LaptopCategories = categories;
+            LaptopViewModel laptopViewModel = new LaptopViewModel
+            {
+                LaptopCategories = categories
+            };
             return PartialView(laptopViewModel);
         }
         
@@ -40,7 +43,16 @@ namespace ECart.Controllers
             LaptopViewModel laptopView = new LaptopViewModel();
             laptopView.Laptops = laptops;
             return View(laptopView);
-        }        
+        }
+        public ActionResult Details(int laptopid)
+        {
+            var laptop = eCart.Laptops.FirstOrDefault(l => l.LaptopId == laptopid);
+            DetailsViewModel detailsViewModel = new DetailsViewModel()
+            {
+                Laptop = laptop
+            };
+            return View(detailsViewModel);
+        }
         public ActionResult AddToShoppingCart(int laptopid)
         {
             var laptop = eCart.Laptops.Find(laptopid);
@@ -56,7 +68,11 @@ namespace ECart.Controllers
                     if (cart.LaptopName == laptop.LaptopName)
                     {
                         cart.SelectedQuantity = InitializeOnce.map[laptopid];
+                        cart.RowSubtotal = cart.RowSubtotal + (int)laptop.Price;
                         InitializeOnce.addtocartViewModel.Subtotal = InitializeOnce.addtocartViewModel.Subtotal + (int)laptop.Price;
+                        //Adding total selected quantity and subtotal to checkout page
+                        //InitializeOnce.checkout.TotalSelectedQuantity = cart.SelectedQuantity;
+                        InitializeOnce.checkout.SubTotal = InitializeOnce.addtocartViewModel.Subtotal;
                     }
                 }
             }
@@ -64,14 +80,20 @@ namespace ECart.Controllers
                 int initialcount = 1;
                 InitializeOnce.map.Add(laptopid, initialcount);
 
-                CartTable cart = new CartTable();
-                cart.SelectedQuantity = InitializeOnce.map[laptopid];
-                cart.LaptopName = laptop.LaptopName;
-                cart.Price = laptop.Price;
+                CartTable cart = new CartTable
+                {
+                    SelectedQuantity = InitializeOnce.map[laptopid],
+                    LaptopName = laptop.LaptopName,
+                    Price = laptop.Price,
+                    RowSubtotal = (int)laptop.Price
+                };
 
                 InitializeOnce.cartTables.Add(cart);
                 InitializeOnce.addtocartViewModel.CartTables = InitializeOnce.cartTables;
                 InitializeOnce.addtocartViewModel.Subtotal = InitializeOnce.addtocartViewModel.Subtotal + (int)laptop.Price;
+                //Adding total selected quantity and subtotal to checkout page
+                //InitializeOnce.checkout.TotalSelectedQuantity = cart.SelectedQuantity;
+                InitializeOnce.checkout.SubTotal = InitializeOnce.addtocartViewModel.Subtotal;
             }
              
             return View(InitializeOnce.addtocartViewModel);
@@ -82,6 +104,50 @@ namespace ECart.Controllers
             LaptopViewModel laptopViewModel = new LaptopViewModel();
             laptopViewModel.Laptops = laptops;
             return View("List",laptopViewModel);
+        }
+        [Authorize]
+        
+        public ActionResult Checkout()
+        {
+            foreach (var total in InitializeOnce.cartTables)
+            {
+                InitializeOnce.checkout.TotalSelectedQuantity = InitializeOnce.checkout.TotalSelectedQuantity + total.SelectedQuantity;
+            }
+            return View(InitializeOnce.checkout);
+        }
+        [Authorize]
+        public ActionResult PlaceOrder(CheckoutViewModel checkoutViewModel)
+        {
+            string shippingAddress = checkoutViewModel.ShippingModel.Address + "," +
+                checkoutViewModel.ShippingModel.Locality + "," +
+                checkoutViewModel.ShippingModel.City + "," +
+                checkoutViewModel.ShippingModel.State + "-" +
+                checkoutViewModel.ShippingModel.Pincode + ",";
+
+
+            var name = User.Identity.Name;
+            var user = eCart.UserTables.FirstOrDefault(m => m.UserName == name);
+            user.ShippingAddress = shippingAddress;
+
+            OrderDetail order = new OrderDetail
+            {
+                UserId = user.UserId,
+                TotalItems = InitializeOnce.checkout.TotalSelectedQuantity,
+                TotalPrice = InitializeOnce.checkout.SubTotal,
+                DateTime = DateTime.Now
+            };
+            eCart.OrderDetails.Add(order);
+            eCart.SaveChanges();
+            return View();
+        }
+        public ActionResult CartIcon()
+        {
+            //if(InitializeOnce.addtocartViewModel == null)
+            //{
+            //    InitializeOnce.addtocartViewModel = null;
+            //    return View("AddToShoppingCart", InitializeOnce.addtocartViewModel);
+            //}
+            return View("AddToShoppingCart",InitializeOnce.addtocartViewModel);
         }
     }
 }

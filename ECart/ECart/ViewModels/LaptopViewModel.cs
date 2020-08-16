@@ -9,6 +9,10 @@ namespace ECart.ViewModels
     {
         public List<Laptop> Laptops { get; set; }
         public List<LaptopCategory> LaptopCategories { get; set; }
+        public class DetailsViewModel
+        {
+            public Laptop Laptop { get; set; }
+        }        
 
     }
 }

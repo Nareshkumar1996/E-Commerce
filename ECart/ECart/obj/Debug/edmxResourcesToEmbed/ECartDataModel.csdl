@@ -39,6 +39,11 @@
       <End Role="Laptops" EntitySet="Laptops" />
     </AssociationSet>
     <EntitySet Name="UserTables" EntityType="ECartModel.UserTable" />
+    <EntitySet Name="OrderDetails" EntityType="ECartModel.OrderDetail" />
+    <AssociationSet Name="FK__OrderDeta__UserI__2B3F6F97" Association="ECartModel.FK__OrderDeta__UserI__2B3F6F97">
+      <End Role="UserTable" EntitySet="UserTables" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="UserTable">
     <Key>
@@ -49,5 +54,30 @@
     <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingAddress" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OrderDetails" Relationship="ECartModel.FK__OrderDeta__UserI__2B3F6F97" FromRole="UserTable" ToRole="OrderDetail" />
   </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="TotalItems" Type="Int32" />
+    <Property Name="TotalPrice" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserTable" Relationship="ECartModel.FK__OrderDeta__UserI__2B3F6F97" FromRole="OrderDetail" ToRole="UserTable" />
+  </EntityType>
+  <Association Name="FK__OrderDeta__UserI__2B3F6F97">
+    <End Type="ECartModel.UserTable" Role="UserTable" Multiplicity="0..1" />
+    <End Type="ECartModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTable">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

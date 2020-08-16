@@ -307,6 +307,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LaptopController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="ECartDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -331,12 +332,16 @@
     <Compile Include="LaptopCategory.cs">
       <DependentUpon>ECartDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>ECartDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserTable.cs">
       <DependentUpon>ECartDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AccountViewModel.cs" />
     <Compile Include="ViewModels\AddtocartViewModel.cs" />
+    <Compile Include="ViewModels\CheckoutViewModel.cs" />
     <Compile Include="ViewModels\LaptopViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -411,10 +416,15 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Laptop\Checkout.cshtml" />
+    <Content Include="Views\Laptop\PlaceOrder.cshtml" />
+    <Content Include="Views\Laptop\CartIcon.cshtml" />
+    <Content Include="Views\Laptop\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

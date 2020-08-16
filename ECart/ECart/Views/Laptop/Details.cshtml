@@ -1,0 +1,13 @@
+﻿@model ECart.ViewModels.LaptopViewModel.DetailsViewModel
+@Styles.Render("~/Styles/Effects")
+<div>
+    <img class="details_img" src="@Model.Laptop.ImageUrl" />
+    <h3>@Model.Laptop.LaptopName</h3>
+    <h4><span class="highlight">Price:</span> Rs.@Model.Laptop.Price</h4>
+</div>
+<div class="addToCart" style="padding-left:0;">
+    <p class="button">
+        @Html.ActionLink("Add to cart", "AddToShoppingCart", new { laptopid = Model.Laptop.LaptopId }, new { @class = "btn btn-primary addToCartbtn" })
+    </p>
+</div>
+

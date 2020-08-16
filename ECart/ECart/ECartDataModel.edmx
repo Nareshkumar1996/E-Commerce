@@ -22,6 +22,16 @@
           <Property Name="LapCategoryId" Type="int" />
           <Property Name="ImageUrl" Type="varchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="OrderDetails">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="TotalItems" Type="int" />
+          <Property Name="TotalPrice" Type="int" />
+          <Property Name="DateTime" Type="datetime" />
+        </EntityType>
         <EntityType Name="UserTable">
           <Key>
             <PropertyRef Name="UserId" />
@@ -31,6 +41,7 @@
           <Property Name="PhoneNumber" Type="varchar" MaxLength="255" />
           <Property Name="Password" Type="varchar" MaxLength="255" />
           <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="ShippingAddress" Type="varchar" MaxLength="400" />
         </EntityType>
         <Association Name="FK__Laptops__LapCate__267ABA7A">
           <End Role="LaptopCategory" Type="Self.LaptopCategory" Multiplicity="0..1" />
@@ -44,13 +55,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__OrderDeta__UserI__2B3F6F97">
+          <End Role="UserTable" Type="Self.UserTable" Multiplicity="0..1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserTable">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ECartModelStoreContainer">
           <EntitySet Name="LaptopCategory" EntityType="Self.LaptopCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Laptops" EntityType="Self.Laptops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Laptops__LapCate__267ABA7A" Association="Self.FK__Laptops__LapCate__267ABA7A">
             <End Role="LaptopCategory" EntitySet="LaptopCategory" />
             <End Role="Laptops" EntitySet="Laptops" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__UserI__2B3F6F97" Association="Self.FK__OrderDeta__UserI__2B3F6F97">
+            <End Role="UserTable" EntitySet="UserTable" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -96,6 +124,11 @@
             <End Role="Laptops" EntitySet="Laptops" />
           </AssociationSet>
           <EntitySet Name="UserTables" EntityType="ECartModel.UserTable" />
+          <EntitySet Name="OrderDetails" EntityType="ECartModel.OrderDetail" />
+          <AssociationSet Name="FK__OrderDeta__UserI__2B3F6F97" Association="ECartModel.FK__OrderDeta__UserI__2B3F6F97">
+            <End Role="UserTable" EntitySet="UserTables" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="UserTable">
           <Key>
@@ -106,7 +139,32 @@
           <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ShippingAddress" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="OrderDetails" Relationship="ECartModel.FK__OrderDeta__UserI__2B3F6F97" FromRole="UserTable" ToRole="OrderDetail" />
         </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="TotalItems" Type="Int32" />
+          <Property Name="TotalPrice" Type="Int32" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="UserTable" Relationship="ECartModel.FK__OrderDeta__UserI__2B3F6F97" FromRole="OrderDetail" ToRole="UserTable" />
+        </EntityType>
+        <Association Name="FK__OrderDeta__UserI__2B3F6F97">
+          <End Type="ECartModel.UserTable" Role="UserTable" Multiplicity="0..1" />
+          <End Type="ECartModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserTable">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -135,11 +193,23 @@
           <EntitySetMapping Name="UserTables">
             <EntityTypeMapping TypeName="ECartModel.UserTable">
               <MappingFragment StoreEntitySet="UserTable">
+                <ScalarProperty Name="ShippingAddress" ColumnName="ShippingAddress" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="ECartModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetails">
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="TotalItems" ColumnName="TotalItems" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

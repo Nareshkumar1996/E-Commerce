@@ -1,0 +1,87 @@
+﻿@model ECart.ViewModels.CheckoutViewModel
+
+
+@Styles.Render("~/Styles/Effects")
+@{
+    ViewBag.Title = "Checkout";
+}
+@using (Html.BeginForm("PlaceOrder", "Laptop", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    
+        <h4>Delivery Address</h4>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ShippingModel.Address, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.ShippingModel.Address, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ShippingModel.Locality, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.ShippingModel.Locality, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ShippingModel.City, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.ShippingModel.City, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ShippingModel.State, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.ShippingModel.State, ECart.ViewModels.CheckoutViewModel.GetState(), "Select State", new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ShippingModel.Pincode, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.ShippingModel.Pincode, new { @class = "form-control" })
+            </div>
+        </div>
+    
+
+    
+        <h4>Payment Method</h4>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ShippingModel.PaymentMethod, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.ShippingModel.PaymentMethod, ECart.ViewModels.CheckoutViewModel.GetPaymentMethod(), "Select Payment Method", new { @class = "form-control" })
+            </div>
+        </div>
+    
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Place your order" />            
+        </div>
+    </div>
+}
+
+
+<div>    
+    <table border="1" class="table table-striped table-dark priceTable">
+        <thead>
+            <tr>
+                <td colspan="2" class="text-center">Price Details</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Price (@Model.TotalSelectedQuantity items)</td>
+                <td>@Model.SubTotal </td>
+            </tr>
+            <tr>
+                <td>Delivery Fee</td>
+                <td>Rs. 0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="text-right">Total Amount</td>
+                <td>@Model.SubTotal</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+
