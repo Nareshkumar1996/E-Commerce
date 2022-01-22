@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ECartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LaptopCategory">
+    <Key>
+      <PropertyRef Name="LapCategoryId" />
+    </Key>
+    <Property Name="LapCategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LapCategoryName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Laptops">
+    <Key>
+      <PropertyRef Name="LaptopId" />
+    </Key>
+    <Property Name="LaptopId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LaptopName" Type="varchar" MaxLength="255" />
+    <Property Name="Price" Type="int" />
+    <Property Name="LapCategoryId" Type="int" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="OrderDetails">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="TotalItems" Type="int" />
+    <Property Name="TotalPrice" Type="int" />
+    <Property Name="DateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="ShippingAddress" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <Association Name="FK__Laptops__LapCate__267ABA7A">
+    <End Role="LaptopCategory" Type="Self.LaptopCategory" Multiplicity="0..1" />
+    <End Role="Laptops" Type="Self.Laptops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LaptopCategory">
+        <PropertyRef Name="LapCategoryId" />
+      </Principal>
+      <Dependent Role="Laptops">
+        <PropertyRef Name="LapCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__UserI__2B3F6F97">
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTable">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ECartModelStoreContainer">
+    <EntitySet Name="LaptopCategory" EntityType="Self.LaptopCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Laptops" EntityType="Self.Laptops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Laptops__LapCate__267ABA7A" Association="Self.FK__Laptops__LapCate__267ABA7A">
+      <End Role="LaptopCategory" EntitySet="LaptopCategory" />
+      <End Role="Laptops" EntitySet="Laptops" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__UserI__2B3F6F97" Association="Self.FK__OrderDeta__UserI__2B3F6F97">
+      <End Role="UserTable" EntitySet="UserTable" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

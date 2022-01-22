@@ -55,6 +55,8 @@ namespace ECart.Controllers
         }
         public ActionResult AddToShoppingCart(int laptopid)
         {
+            //Adding laptopid to the map if the item is new to cart
+            //Checking the laptop id is present in the map, if present im only changing the quantity and row subtotal
             var laptop = eCart.Laptops.Find(laptopid);
 
             if (InitializeOnce.map.ContainsKey(laptopid))
@@ -105,14 +107,17 @@ namespace ECart.Controllers
             laptopViewModel.Laptops = laptops;
             return View("List",laptopViewModel);
         }
-        [Authorize]
-        
+
+        [Authorize]        
         public ActionResult Checkout()
         {
             foreach (var total in InitializeOnce.cartTables)
             {
                 InitializeOnce.checkout.TotalSelectedQuantity = InitializeOnce.checkout.TotalSelectedQuantity + total.SelectedQuantity;
             }
+            var username = User.Identity.Name;
+            var user = eCart.UserTables.FirstOrDefault(u => u.UserName == username);
+            ViewBag.DeliveryAddress = user.ShippingAddress;
             return View(InitializeOnce.checkout);
         }
         [Authorize]

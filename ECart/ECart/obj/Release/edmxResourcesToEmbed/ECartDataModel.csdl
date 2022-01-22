@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ECartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LaptopCategory">
+    <Key>
+      <PropertyRef Name="LapCategoryId" />
+    </Key>
+    <Property Name="LapCategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LapCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Laptops" Relationship="Self.FK__Laptops__LapCate__267ABA7A" FromRole="LaptopCategory" ToRole="Laptops" />
+  </EntityType>
+  <EntityType Name="Laptop">
+    <Key>
+      <PropertyRef Name="LaptopId" />
+    </Key>
+    <Property Name="LaptopId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LaptopName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="LapCategoryId" Type="Int32" />
+    <NavigationProperty Name="LaptopCategory" Relationship="Self.FK__Laptops__LapCate__267ABA7A" FromRole="Laptops" ToRole="LaptopCategory" />
+    <Property Name="ImageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__Laptops__LapCate__267ABA7A">
+    <End Role="LaptopCategory" Type="Self.LaptopCategory" Multiplicity="0..1" />
+    <End Role="Laptops" Type="Self.Laptop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LaptopCategory">
+        <PropertyRef Name="LapCategoryId" />
+      </Principal>
+      <Dependent Role="Laptops">
+        <PropertyRef Name="LapCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ECartEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LaptopCategories" EntityType="Self.LaptopCategory" />
+    <EntitySet Name="Laptops" EntityType="Self.Laptop" />
+    <AssociationSet Name="FK__Laptops__LapCate__267ABA7A" Association="Self.FK__Laptops__LapCate__267ABA7A">
+      <End Role="LaptopCategory" EntitySet="LaptopCategories" />
+      <End Role="Laptops" EntitySet="Laptops" />
+    </AssociationSet>
+    <EntitySet Name="UserTables" EntityType="ECartModel.UserTable" />
+    <EntitySet Name="OrderDetails" EntityType="ECartModel.OrderDetail" />
+    <AssociationSet Name="FK__OrderDeta__UserI__2B3F6F97" Association="ECartModel.FK__OrderDeta__UserI__2B3F6F97">
+      <End Role="UserTable" EntitySet="UserTables" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingAddress" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OrderDetails" Relationship="ECartModel.FK__OrderDeta__UserI__2B3F6F97" FromRole="UserTable" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="TotalItems" Type="Int32" />
+    <Property Name="TotalPrice" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserTable" Relationship="ECartModel.FK__OrderDeta__UserI__2B3F6F97" FromRole="OrderDetail" ToRole="UserTable" />
+  </EntityType>
+  <Association Name="FK__OrderDeta__UserI__2B3F6F97">
+    <End Type="ECartModel.UserTable" Role="UserTable" Multiplicity="0..1" />
+    <End Type="ECartModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTable">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

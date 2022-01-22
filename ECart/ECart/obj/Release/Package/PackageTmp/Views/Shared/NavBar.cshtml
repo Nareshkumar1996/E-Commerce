@@ -1,0 +1,24 @@
+﻿@model ECart.ViewModels.LaptopViewModel
+
+    <li class="dropdown">
+       
+        @Html.ActionLink("Laptops", " ", "",new { @class= "dropdown-toggle", data_toggle="dropdown"})
+        <ul class="dropdown-menu">
+            
+            @foreach (var category in Model.LaptopCategories)
+            {
+            <li>
+                @*<a asp-controller="Pie" asp-action="List"
+        asp-route-category="@category.CategoryName">@category.CategoryName</a>*@
+                @Html.ActionLink(category.LapCategoryName, "List", new { categoryid= category.LapCategoryId})
+            </li>
+            }
+            <li class="divider"></li>
+            <li>
+                @*<a asp-controller="Pie" asp-action="List" asp-route-Category="">View all pies</a>*@
+                @Html.ActionLink("All Laptops", "Alllaptops")
+            </li>
+        </ul>
+    </li>
+
+

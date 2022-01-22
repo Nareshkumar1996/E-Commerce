@@ -14,12 +14,18 @@ namespace ECart.ViewModels
     }
     public class LoginModel
     {
+        [Required]
         public string Email { get; set; }
+        [Required]
         public string Password { get; set; }        
     }
     public class RegisterModel
     {
+        [Required]
         public string UserName { get; set; }
+
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Display(Name = "Password")]
@@ -28,6 +34,9 @@ namespace ECart.ViewModels
         
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string PhoneNumber { get; set; }
     }
 }
