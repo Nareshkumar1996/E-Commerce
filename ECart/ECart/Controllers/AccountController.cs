@@ -11,9 +11,13 @@ namespace ECart.Controllers
         {
             return View();
         }
+        [HttpGet]
         public ActionResult Login()
         {
-            return View();
+            var login = new AccountViewModel();
+            var loginModel = new LoginModel();
+            login.LoginModel = loginModel;
+            return View(login);
         }
         [HttpPost]
         public ActionResult Login(LoginModel loginModel, string ReturnUrl)

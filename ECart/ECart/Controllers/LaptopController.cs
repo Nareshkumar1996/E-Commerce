@@ -115,6 +115,8 @@ namespace ECart.Controllers
             {
                 InitializeOnce.checkout.TotalSelectedQuantity = InitializeOnce.checkout.TotalSelectedQuantity + total.SelectedQuantity;
             }
+
+            InitializeOnce.checkout.ShippingModel = new ShippingModel();
             var username = User.Identity.Name;
             var user = eCart.UserTables.FirstOrDefault(u => u.UserName == username);
             ViewBag.DeliveryAddress = user.ShippingAddress;
