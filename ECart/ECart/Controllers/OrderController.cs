@@ -9,7 +9,7 @@ namespace ECart.Controllers
 {
     public class OrderController : Controller
     {
-        ECartEntities1 eCart = new ECartEntities1();
+        ECartEntities eCart = new ECartEntities();
         public ActionResult Index()
         {
             return View();

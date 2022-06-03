@@ -14,17 +14,15 @@ namespace ECart.Controllers
         [HttpGet]
         public ActionResult Login()
         {
-            var login = new AccountViewModel();
-            var loginModel = new LoginModel();
-            login.LoginModel = loginModel;
-            return View(login);
+           
+            return View();
         }
         [HttpPost]
         public ActionResult Login(LoginModel loginModel, string ReturnUrl)
         {
             string EncryptedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(loginModel.Password, "SHA1");           
             ReturnUrl = ReturnUrl ?? Url.Content("~/");
-            ECartEntities1 eCart = new ECartEntities1();
+            ECartEntities eCart = new ECartEntities();
             var user = eCart.UserTables.FirstOrDefault(m => m.Email == loginModel.Email & m.Password == EncryptedPassword);
             
             if(user != null)
@@ -50,7 +48,7 @@ namespace ECart.Controllers
                 Email = registerModel.Email,
                 Password = EncryptedPassword
             };
-            ECartEntities1 eCart = new ECartEntities1();
+            ECartEntities eCart = new ECartEntities();
             eCart.UserTables.Add(user);            
             eCart.SaveChanges();
             return Redirect(ReturnUrl);

@@ -13,10 +13,10 @@ namespace ECart
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ECartEntities1 : DbContext
+    public partial class ECartEntities : DbContext
     {
-        public ECartEntities1()
-            : base("name=ECartEntities1")
+        public ECartEntities()
+            : base("name=ECartEntities")
         {
         }
     
@@ -27,7 +27,7 @@ namespace ECart
     
         public virtual DbSet<LaptopCategory> LaptopCategories { get; set; }
         public virtual DbSet<Laptop> Laptops { get; set; }
-        public virtual DbSet<UserTable> UserTables { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<UserTable> UserTables { get; set; }
     }
 }

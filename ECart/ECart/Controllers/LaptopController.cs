@@ -19,7 +19,7 @@ namespace ECart.Controllers
     }    
     public class LaptopController : Controller
     {
-        ECartEntities1 eCart = new ECartEntities1();
+        ECartEntities eCart = new ECartEntities();
 
         public ActionResult Index()
         {
