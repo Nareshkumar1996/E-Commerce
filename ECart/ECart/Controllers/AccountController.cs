@@ -17,10 +17,7 @@ namespace ECart.Controllers
         {
             _eCartEntities = eCartEntities;
         }
-        public ActionResult Index()
-        {
-            return View();
-        }
+ 
         [HttpGet]
         public ActionResult Login()
         {
@@ -40,7 +37,7 @@ namespace ECart.Controllers
                 FormsAuthentication.SetAuthCookie(user.UserName, false);
                 return Redirect(returnUrl);
             }
-            AccountViewModel accountViewModel = new AccountViewModel();
+            var accountViewModel = new AccountViewModel();
             return View(accountViewModel);
         }
         public ActionResult Register()
