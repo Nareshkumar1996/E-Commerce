@@ -7,6 +7,16 @@ namespace ECart.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly ECartEntities _eCartEntities;
+
+        public AccountController()
+        {
+            
+        }
+        public AccountController(ECartEntities eCartEntities)
+        {
+            _eCartEntities = eCartEntities;
+        }
         public ActionResult Index()
         {
             return View();
@@ -18,17 +28,17 @@ namespace ECart.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(LoginModel loginModel, string ReturnUrl)
+        public ActionResult Login(LoginModel loginModel, string returnUrl)
         {
-            string EncryptedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(loginModel.Password, "SHA1");           
-            ReturnUrl = ReturnUrl ?? Url.Content("~/");
-            ECartEntities eCart = new ECartEntities();
-            var user = eCart.UserTables.FirstOrDefault(m => m.Email == loginModel.Email & m.Password == EncryptedPassword);
+            var encryptedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(loginModel.Password, "SHA1");           
+            returnUrl = returnUrl ?? Url.Content("~/");
+            
+            var user = _eCartEntities.UserTables.FirstOrDefault(m => m.Email == loginModel.Email & m.Password == encryptedPassword);
             
             if(user != null)
             {
                 FormsAuthentication.SetAuthCookie(user.UserName, false);
-                return Redirect(ReturnUrl);
+                return Redirect(returnUrl);
             }
             AccountViewModel accountViewModel = new AccountViewModel();
             return View(accountViewModel);
@@ -38,20 +48,20 @@ namespace ECart.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Register(RegisterModel registerModel, string ReturnUrl)
+        public ActionResult Register(RegisterModel registerModel, string returnUrl)
         {
-            ReturnUrl = ReturnUrl ?? Url.Content("~/");
-            string EncryptedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(registerModel.Password, "SHA1");
-            UserTable user = new UserTable() {
+            returnUrl = returnUrl ?? Url.Content("~/");
+            var encryptedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(registerModel.Password, "SHA1");
+            var user = new UserTable() {
                 UserName = registerModel.UserName,
                 PhoneNumber = registerModel.PhoneNumber,
                 Email = registerModel.Email,
-                Password = EncryptedPassword
+                Password = encryptedPassword
             };
-            ECartEntities eCart = new ECartEntities();
-            eCart.UserTables.Add(user);            
-            eCart.SaveChanges();
-            return Redirect(ReturnUrl);
+            
+            _eCartEntities.UserTables.Add(user);            
+            _eCartEntities.SaveChanges();
+            return Redirect(returnUrl);
         }
         public ActionResult Logoff()
         {
