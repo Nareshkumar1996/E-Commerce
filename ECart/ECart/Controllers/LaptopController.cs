@@ -36,40 +36,42 @@ namespace ECart.Controllers
             return PartialView(laptopViewModel);
         }
         
-        public ActionResult List(int categoryid)
+        public ActionResult List(int categoryId)
         {
            
-            List<Laptop> laptops = eCart.Laptops.Where(c => c.LapCategoryId == categoryid).ToList();
-            LaptopViewModel laptopView = new LaptopViewModel();
-            laptopView.Laptops = laptops;
+            var laptops = eCart.Laptops.Where(c => c.LapCategoryId == categoryId).ToList();
+            var laptopView = new LaptopViewModel
+            {
+                Laptops = laptops
+            };
             return View(laptopView);
         }
-        public ActionResult Details(int laptopid)
+        public ActionResult Details(int laptopId)
         {
-            var laptop = eCart.Laptops.FirstOrDefault(l => l.LaptopId == laptopid);
-            DetailsViewModel detailsViewModel = new DetailsViewModel()
+            var laptop = eCart.Laptops.FirstOrDefault(l => l.LaptopId == laptopId);
+            var detailsViewModel = new DetailsViewModel()
             {
                 Laptop = laptop
             };
             return View(detailsViewModel);
         }
-        public ActionResult AddToShoppingCart(int laptopid)
+        public ActionResult AddToShoppingCart(int laptopId)
         {
             //Adding laptopid to the map if the item is new to cart
             //Checking the laptop id is present in the map, if present im only changing the quantity and row subtotal
-            var laptop = eCart.Laptops.Find(laptopid);
+            var laptop = eCart.Laptops.Find(laptopId);
 
-            if (InitializeOnce.map.ContainsKey(laptopid))
+            if (InitializeOnce.map.ContainsKey(laptopId))
             {
                 int value;
-                InitializeOnce.map.TryGetValue(laptopid, out value);
-                InitializeOnce.map[laptopid] = value + 1;
+                InitializeOnce.map.TryGetValue(laptopId, out value);
+                InitializeOnce.map[laptopId] = value + 1;
 
                 foreach (var cart in InitializeOnce.cartTables)
                 {
                     if (cart.LaptopName == laptop.LaptopName)
                     {
-                        cart.SelectedQuantity = InitializeOnce.map[laptopid];
+                        cart.SelectedQuantity = InitializeOnce.map[laptopId];
                         cart.RowSubtotal = cart.RowSubtotal + (int)laptop.Price;
                         InitializeOnce.addtocartViewModel.Subtotal = InitializeOnce.addtocartViewModel.Subtotal + (int)laptop.Price;
                         //Adding total selected quantity and subtotal to checkout page
@@ -80,11 +82,11 @@ namespace ECart.Controllers
             }
             else {
                 int initialcount = 1;
-                InitializeOnce.map.Add(laptopid, initialcount);
+                InitializeOnce.map.Add(laptopId, initialcount);
 
                 CartTable cart = new CartTable
                 {
-                    SelectedQuantity = InitializeOnce.map[laptopid],
+                    SelectedQuantity = InitializeOnce.map[laptopId],
                     LaptopName = laptop.LaptopName,
                     Price = laptop.Price,
                     RowSubtotal = (int)laptop.Price
@@ -102,9 +104,11 @@ namespace ECart.Controllers
         }
         public ActionResult AllLaptops()
         {
-            List<Laptop> laptops = eCart.Laptops.ToList();
-            LaptopViewModel laptopViewModel = new LaptopViewModel();
-            laptopViewModel.Laptops = laptops;
+            var laptops = eCart.Laptops.ToList();
+            var laptopViewModel = new LaptopViewModel
+            {
+                Laptops = laptops
+            };
             return View("List",laptopViewModel);
         }
 

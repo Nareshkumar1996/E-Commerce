@@ -10,7 +10,7 @@
             <li>
                 @*<a asp-controller="Pie" asp-action="List"
         asp-route-category="@category.CategoryName">@category.CategoryName</a>*@
-                @Html.ActionLink(category.LapCategoryName, "List", new { categoryid= category.LapCategoryId})
+                @Html.ActionLink(category.LapCategoryName, "List", new { categoryId= category.LapCategoryId})
             </li>
             }
             <li class="divider"></li>

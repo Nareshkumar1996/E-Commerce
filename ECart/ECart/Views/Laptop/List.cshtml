@@ -8,12 +8,12 @@
             <div class="thumbnail">
                 <img src="@laptop.ImageUrl" alt="" class="imgStyle" />
                 <div class="caption">
-                    <h4 class="LapName">@Html.ActionLink(laptop.LaptopName, "Details", new { laptopid = laptop.LaptopId })</h4>
+                    <h4 class="LapName">@Html.ActionLink(laptop.LaptopName, "Details", new { laptopId = laptop.LaptopId })</h4>
                     <h4 class="">Rs. @laptop.Price</h4>
                 </div>
                 <div class="addToCart">
                     <p class="button">
-                        @Html.ActionLink("Add to cart", "AddToShoppingCart", new { laptopid = laptop.LaptopId }, new { @class="btn btn-primary addToCartbtn"})
+                        @Html.ActionLink("Add to cart", "AddToShoppingCart", new { laptopId = laptop.LaptopId }, new { @class="btn btn-primary addToCartbtn"})
                     </p>
                 </div>
             </div>
