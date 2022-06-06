@@ -28,8 +28,8 @@ namespace ECart.Controllers
         }
         public ActionResult NavBar()
         {            
-            List<LaptopCategory> categories = eCart.LaptopCategories.ToList();
-            LaptopViewModel laptopViewModel = new LaptopViewModel
+            var categories = eCart.LaptopCategories.ToList();
+            var laptopViewModel = new LaptopViewModel
             {
                 LaptopCategories = categories
             };
@@ -84,7 +84,7 @@ namespace ECart.Controllers
                 int initialcount = 1;
                 InitializeOnce.map.Add(laptopId, initialcount);
 
-                CartTable cart = new CartTable
+                var cart = new CartTable
                 {
                     SelectedQuantity = InitializeOnce.map[laptopId],
                     LaptopName = laptop.LaptopName,
@@ -140,7 +140,7 @@ namespace ECart.Controllers
             var user = eCart.UserTables.FirstOrDefault(m => m.UserName == name);
             user.ShippingAddress = shippingAddress;
 
-            OrderDetail order = new OrderDetail
+            var order = new OrderDetail
             {
                 UserId = user.UserId,
                 TotalItems = InitializeOnce.checkout.TotalSelectedQuantity,

@@ -723,4 +723,3 @@ D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.csproj.CoreCompileInputs.cache
 D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.csproj.CopyComplete
 D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.dll
 D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.pdb
-D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.csproj.AssemblyReference.cache
