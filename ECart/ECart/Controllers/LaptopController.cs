@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using ECart.Data;
 using static ECart.ViewModels.LaptopViewModel;
 
 namespace ECart.Controllers
@@ -20,7 +21,16 @@ namespace ECart.Controllers
     public class LaptopController : Controller
     {
         ECartEntities eCart = new ECartEntities();
+        private readonly IUnitOfWork _unitOfWork;
+        public LaptopController()
+        {
 
+        }
+
+        public LaptopController(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
         public ActionResult Index()
         {
             var categories = eCart.LaptopCategories;
@@ -28,7 +38,7 @@ namespace ECart.Controllers
         }
         public ActionResult NavBar()
         {            
-            var categories = eCart.LaptopCategories.ToList();
+            var categories = _unitOfWork.GetEntities<LaptopCategory>().ToList();
             var laptopViewModel = new LaptopViewModel
             {
                 LaptopCategories = categories
@@ -39,7 +49,7 @@ namespace ECart.Controllers
         public ActionResult List(int categoryId)
         {
            
-            var laptops = eCart.Laptops.Where(c => c.LapCategoryId == categoryId).ToList();
+           var laptops = _unitOfWork.GetEntities<Laptop>().Where(c => c.LapCategoryId == categoryId).ToList();
             var laptopView = new LaptopViewModel
             {
                 Laptops = laptops
@@ -48,7 +58,7 @@ namespace ECart.Controllers
         }
         public ActionResult Details(int laptopId)
         {
-            var laptop = eCart.Laptops.FirstOrDefault(l => l.LaptopId == laptopId);
+            var laptop = _unitOfWork.GetEntities<Laptop>().FirstOrDefault(l => l.LaptopId == laptopId);
             var detailsViewModel = new DetailsViewModel()
             {
                 Laptop = laptop
@@ -104,7 +114,7 @@ namespace ECart.Controllers
         }
         public ActionResult AllLaptops()
         {
-            var laptops = eCart.Laptops.ToList();
+            var laptops = _unitOfWork.GetEntities<Laptop>().ToList();
             var laptopViewModel = new LaptopViewModel
             {
                 Laptops = laptops

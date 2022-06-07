@@ -719,7 +719,13 @@ D:\gg\E-Commerce\ECart\ECart\bin\System.Web.WebPages.Deployment.xml
 D:\gg\E-Commerce\ECart\ECart\bin\System.Web.WebPages.Razor.xml
 D:\gg\E-Commerce\ECart\ECart\bin\Antlr3.Runtime.pdb
 D:\gg\E-Commerce\ECart\ECart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.csproj.AssemblyReference.cache
 D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.csproj.CoreCompileInputs.cache
 D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.csproj.CopyComplete
 D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.dll
 D:\gg\E-Commerce\ECart\ECart\obj\Debug\ECart.pdb
+D:\gg\E-Commerce\ECart\ECart\bin\Unity.Abstractions.dll
+D:\gg\E-Commerce\ECart\ECart\bin\Unity.Container.dll
+D:\gg\E-Commerce\ECart\ECart\bin\Unity.Mvc5.dll
+D:\gg\E-Commerce\ECart\ECart\bin\Unity.Abstractions.pdb
+D:\gg\E-Commerce\ECart\ECart\bin\Unity.Container.pdb
