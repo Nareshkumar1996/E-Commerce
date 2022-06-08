@@ -67,9 +67,9 @@ namespace ECart.Controllers
         }
         public ActionResult AddToShoppingCart(int laptopId)
         {
-            //Adding laptopid to the map if the item is new to cart
-            //Checking the laptop id is present in the map, if present im only changing the quantity and row subtotal
-            var laptop = eCart.Laptops.Find(laptopId);
+            //Adding laptopId to the map if the item is new to cart
+            //In If condition checking the laptop id is present in the map, if present im only changing the quantity and row subtotal
+            var laptop = _unitOfWork.GetEntities<Laptop>().Find(laptopId);
 
             if (InitializeOnce.map.ContainsKey(laptopId))
             {
@@ -84,13 +84,14 @@ namespace ECart.Controllers
                         cart.SelectedQuantity = InitializeOnce.map[laptopId];
                         cart.RowSubtotal = cart.RowSubtotal + (int)laptop.Price;
                         InitializeOnce.addtocartViewModel.Subtotal = InitializeOnce.addtocartViewModel.Subtotal + (int)laptop.Price;
-                        //Adding total selected quantity and subtotal to checkout page
-                        //InitializeOnce.checkout.TotalSelectedQuantity = cart.SelectedQuantity;
+
+                        //Adding subtotal to checkout page
                         InitializeOnce.checkout.SubTotal = InitializeOnce.addtocartViewModel.Subtotal;
                     }
                 }
             }
-            else {
+            else 
+            {
                 int initialcount = 1;
                 InitializeOnce.map.Add(laptopId, initialcount);
 
@@ -105,8 +106,8 @@ namespace ECart.Controllers
                 InitializeOnce.cartTables.Add(cart);
                 InitializeOnce.addtocartViewModel.CartTables = InitializeOnce.cartTables;
                 InitializeOnce.addtocartViewModel.Subtotal = InitializeOnce.addtocartViewModel.Subtotal + (int)laptop.Price;
-                //Adding total selected quantity and subtotal to checkout page
-                //InitializeOnce.checkout.TotalSelectedQuantity = cart.SelectedQuantity;
+
+                //Adding subtotal to checkout page
                 InitializeOnce.checkout.SubTotal = InitializeOnce.addtocartViewModel.Subtotal;
             }
              
