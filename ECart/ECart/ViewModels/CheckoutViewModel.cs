@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -55,11 +56,17 @@ namespace ECart.ViewModels
     }
     public class ShippingModel
     {
+        [Required]
         public string Address { get; set; }
+        [Required]
         public string Locality { get; set; }
+        [Required]
         public string City { get; set; }
+        [Required]
         public string State { get; set; }
+        [Required]
         public int Pincode { get; set; }
+        [Required]
         public string PaymentMethod { get; set; }
 
     }

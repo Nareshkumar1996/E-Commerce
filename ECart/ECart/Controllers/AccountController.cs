@@ -2,20 +2,21 @@
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
+using ECart.Data;
 
 namespace ECart.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly ECartEntities _eCartEntities;
+        private readonly IUnitOfWork _unitOfWork;
 
         public AccountController()
         {
-            
+
         }
-        public AccountController(ECartEntities eCartEntities)
+        public AccountController(IUnitOfWork unitOfWork)
         {
-            _eCartEntities = eCartEntities;
+            _unitOfWork = unitOfWork;
         }
  
         [HttpGet]
@@ -30,7 +31,7 @@ namespace ECart.Controllers
             var encryptedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(loginModel.Password, "SHA1");           
             returnUrl = returnUrl ?? Url.Content("~/");
             
-            var user = _eCartEntities.UserTables.FirstOrDefault(m => m.Email == loginModel.Email & m.Password == encryptedPassword);
+            var user = _unitOfWork.GetEntities<UserTable>().FirstOrDefault(m => m.Email == loginModel.Email & m.Password == encryptedPassword);
             
             if(user != null)
             {
@@ -56,8 +57,8 @@ namespace ECart.Controllers
                 Password = encryptedPassword
             };
             
-            _eCartEntities.UserTables.Add(user);            
-            _eCartEntities.SaveChanges();
+            _unitOfWork.Add(user);
+            _unitOfWork.Commit();
             return Redirect(returnUrl);
         }
         public ActionResult Logoff()

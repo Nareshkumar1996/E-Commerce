@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using ECart.Data;
+using Microsoft.Ajax.Utilities;
 using static ECart.ViewModels.LaptopViewModel;
 
 namespace ECart.Controllers
@@ -20,7 +21,6 @@ namespace ECart.Controllers
     }    
     public class LaptopController : Controller
     {
-        ECartEntities eCart = new ECartEntities();
         private readonly IUnitOfWork _unitOfWork;
         public LaptopController()
         {
@@ -33,7 +33,7 @@ namespace ECart.Controllers
         }
         public ActionResult Index()
         {
-            var categories = eCart.LaptopCategories;
+            var categories = _unitOfWork.GetEntities<LaptopCategory>();
             return View(categories);
         }
         public ActionResult NavBar()
@@ -133,24 +133,26 @@ namespace ECart.Controllers
 
             InitializeOnce.checkout.ShippingModel = new ShippingModel();
             var username = User.Identity.Name;
-            var user = eCart.UserTables.FirstOrDefault(u => u.UserName == username);
+            var user = _unitOfWork.GetEntities<UserTable>().FirstOrDefault(u => u.UserName == username);
             ViewBag.DeliveryAddress = user.ShippingAddress;
             return View(InitializeOnce.checkout);
         }
         [Authorize]
         public ActionResult PlaceOrder(CheckoutViewModel checkoutViewModel)
         {
-            string shippingAddress = checkoutViewModel.ShippingModel.Address + "," +
-                checkoutViewModel.ShippingModel.Locality + "," +
-                checkoutViewModel.ShippingModel.City + "," +
-                checkoutViewModel.ShippingModel.State + "-" +
-                checkoutViewModel.ShippingModel.Pincode + ",";
-
-
             var name = User.Identity.Name;
-            var user = eCart.UserTables.FirstOrDefault(m => m.UserName == name);
-            user.ShippingAddress = shippingAddress;
+            var user = _unitOfWork.GetEntities<UserTable>().FirstOrDefault(m => m.UserName == name);
 
+            if (!checkoutViewModel.ShippingModel.Address.IsNullOrWhiteSpace())
+            {
+                var shippingAddress = checkoutViewModel.ShippingModel.Address + "," +
+                                      checkoutViewModel.ShippingModel.Locality + "," +
+                                      checkoutViewModel.ShippingModel.City + "," +
+                                      checkoutViewModel.ShippingModel.State + "-" +
+                                      checkoutViewModel.ShippingModel.Pincode + ",";
+                user.ShippingAddress = shippingAddress;
+            }
+            
             var order = new OrderDetail
             {
                 UserId = user.UserId,
@@ -158,8 +160,8 @@ namespace ECart.Controllers
                 TotalPrice = InitializeOnce.checkout.SubTotal,
                 DateTime = DateTime.Now
             };
-            eCart.OrderDetails.Add(order);
-            eCart.SaveChanges();
+            _unitOfWork.Add(order);
+            _unitOfWork.Commit();
             return View();
         }
         public ActionResult CartIcon()
